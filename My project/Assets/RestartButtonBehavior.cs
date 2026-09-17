@@ -1,17 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class StartButtonBehaviour : MonoBehaviour
+public class RestartButtonBehavior : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-    }
 
-    public void OnStartButtonPressed()
+    }
+    
+    public void OnRestartButtonPressed()
     {
-        Debug.Log("Start Button Pressed");
+        Debug.Log("Restart Button Pressed");
         SceneManager.LoadScene("Play");
     }
 

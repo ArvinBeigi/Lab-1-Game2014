@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartButtonBehaviour : MonoBehaviour
+public class BackButtonBehavior : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -9,10 +9,10 @@ public class StartButtonBehaviour : MonoBehaviour
         
     }
 
-    public void OnStartButtonPressed()
+    public void OnBackButtonPressed()
     {
-        Debug.Log("Start Button Pressed");
-        SceneManager.LoadScene("Play");
+        Debug.Log("Back Button Pressed");
+        SceneManager.LoadScene("Start");
     }
 
     // Update is called once per frame
