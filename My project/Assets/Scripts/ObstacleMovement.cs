@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class ObstacleMovement : MonoBehaviour
@@ -15,6 +14,22 @@ public class ObstacleMovement : MonoBehaviour
 
         if (transform.position.y < despawnY)
         {
+            gameObject.SetActive(false);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            LifeManager lifeManager =
+                FindFirstObjectByType<LifeManager>();
+
+            if (lifeManager != null)
+            {
+                lifeManager.LoseLife();
+            }
+
             gameObject.SetActive(false);
         }
     }
